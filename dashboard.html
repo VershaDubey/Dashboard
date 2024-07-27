@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Vision</title>
+    <link rel="stylesheet" href="dashbstyle.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
+</head>
+
+<body>
+    <header>
+        <img src="C:\Users\Hp\OneDrive\Desktop\Dashboard\Group 79.svg" alt="Farmer">
+        <div class="language-dropdown">
+            <select onchange="setLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
+        <div class="auth-buttons">
+            <button class="logout">Logout</button>
+        </div>
+        
+    </header>
+    <nav>
+        <div class="topnav">
+            <a class="active" href="#">Home</a>
+            <a href="#">Crop Monitoring</a>
+            <a href="#">Resource Management</a>
+            <a href="#">Planning & Assessment</a>
+            <a href="#">E-Market</a>
+            <a href="#">Help</a>
+        </div>
+    </nav>
+    <div class="section1">
+        <div class="farmer-container">
+            <i class="fa fa-user-circle custom-size"></i>
+             <h4>Welcome Farmer</h4>
+            <h4>Email id</h4><br>
+            <i class='fa-solid fa-location-dot red-color'></i>
+            <label for="psw">Farm Location</label><i class="bi bi-patch-plus"></i>
+            <span id="openModalBtn" style="cursor: pointer";><i class='fa fa-plus-circle'></i></span>
+            <br><br>
+            <select>Select Farm</select>
+                <!-- Modal content -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="landForm">
+                <label for="state">State:</label>
+                <select type="state" id="state" name="state" required></select>
+
+                <label for="district">District:</label>
+                <select type="district" id="district" name="district" required></select>
+
+                <label for="block">Block:</label>
+                <select type="number" id="block" name="block" required></select>
+
+                <label for="village">Village:</label>
+                <select type="text" id="village" name="village" required></select>
+
+                <label for="khasraNo">Khasra No:</label>
+                <input type="number" id="khasraNo" name="khasraNo" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>       
+            <br><br>
+            <hr>
+            <div class="button-grid">
+                <button>Dashboard</button>
+                <button>Boundary Farm</button>
+                <button>Track Crop Health</button>
+                <button>Water Resource info</button>
+                <button>Plan For Irrigation</button>
+                <button>Harvesting assessment</button>
+                <button>E-market place</button>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="Col2">
+                <div class="row1">
+                    <h3><b>Your agricultural assistant</b></h3>
+                    <p>Helping you to make the right decision and seed your </p>
+                </div>
+                <div class="row2">
+                    <div class="row2_row1">
+                        <div class="row2_row1_col1row1_row2_box">
+                            <div class="icon_temp"><i class='fa-solid fa-temperature-full'></i></div>
+                            <div class="info_temp">
+                                <div class="text_temp">
+                                    <pre><b id="air-temp-value"> </b></pre>
+                                    <p>Air Temp</p><br>
+                                </div>
+                                <div class="btn_tem">
+                                    <button>Good</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2_row1_col2row1_row2_box">
+                            <div class="icon_temp"><i class='fa-solid fa-droplet'></i></div>
+                            <div class="info_temp">
+                                <div class="text_temp">
+                                    <h3>+24*c</h3>
+                                    <p>Soil Moisture</p><br>
+                                </div>
+                                <div class="btn_tem">
+                                    <button>Good</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2-row2">
+                            <div class="row2_row2_col1row1_row2_box">
+                                <div class="icon_temp"><i class='fa fa-hashtag'></i></div>
+                                <div class="info_temp">
+                                    <div class="text_temp">
+                                        <h3>+24*c</h3>
+                                        <p>Crop Health</p><br>
+                                    </div>
+                                    <div class="btn_tem">
+                                        <button>Good</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="row3">
+                    <h2>Growth Progress</h2>
+                  <form>  <label for="etcn">Enter  Crop Name: </label>
+                    <input type="text" placeholder="" name="etcn" id="container" required><br>
+<label for="etds">Enter  Date of Sowing:</label>
+<input type="text" placeholder="" name="etds" id="container" required><br>
+<label for="etds">Enter Sowing Area: </label>
+<input type="text" placeholder=" "name="etds" id="container" required>
+<div class="acr"><p>(in acres)</p></div>
+<br>
+</form>
+<div class="wrapper">
+    <!-- <div class="texxt">
+        <p>Soil Moisture:</p>
+        <p>Crop Health</p>
+    </div> -->
+    <div><br>
+        <p>Soil Moisture:</p><br><br><br>
+        <p>Crop Health:</p>
+        
+    </div>
+    <!-- <div>
+    <p>Crop Health</p>
+</div> --><div class="two">
+        <p>Average for Harvesting</p>
+        <div class="circular-bar" id="bar1">
+            <div class="percent" id="percent1">0%</div>
+        </div>
+        <div class="circular-bar" id="bar2">
+            <div class="percent" id="percent2">0%</div>
+        </div>
+         </div>
+    <div class ="one">
+    <p>Current Status</p>
+    <div class="circular-bar" id="bar3">
+        <div class="percent" id="percent3">0%</div>
+    </div>
+    <div class="circular-bar" id="bar4">
+        <div class="percent" id="percent4">0%</div>
+    </div>
+    </div>
+    
+</div>
+     
+        </div>
+        </div>
+        </div>
+        <div class="right-container">
+            <div class="image-container">
+                <img src="wheat.png" alt="Agriculture Image">
+                <h3>Crop Yield Estimation</h3>
+                <p>Crop Area:</p>
+                <p>Yield Estimate:</p><br>
+                <p>Current Market Value:</p><br>
+            </div>
+          
+            <div class="segment">
+                <h4>Suggestions/Recommendations</h4>
+                <p>Content</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const apiKey = '3b200a299b41effb633163465a116b7c';
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Jaipur&appid=${apiKey}&units=metric`;
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('air-temp-value').textContent = `${data.main.temp}°C`;
+                    document.getElementById('precipitation-value').textContent = `${data.rain ? data.rain['1h'] : 0}mm`;
+                })
+            if (tempCelsius >= 0 && tempCelsius <= 5) {
+                console.log("The temperature is suitable for cool-season crops.");
+            } else {
+                console.log("The temperature is not suitable for cool-season crops.");
+            }
+        })
+
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+    <script>
+        function setLanguage(lang) {
+        }
+       
+    </script>
+     
+
+    <script src="scriptd.js"></script>
+   <footer class="footer">
+    <div class="footer-content">
+        <img src="company logo .png" alt="Logo" class="footer-logo">
+        <div class="footer-text">
+            <p>Developed & Maintained by GPSPL.<br>
+               This site is best viewed in 1024 x 768 resolution with latest version of Chrome, Firefox, Safari and Microsoft Edge.<br>
+               Copyright © GPSPL. All Rights Reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

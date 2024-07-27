@@ -1,0 +1,70 @@
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100PX;
+    height: 100PX;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15PX auto;
+    padding: 20PX;
+    border: 1PX solid #888;
+    width: 80PX;
+    max-width: 500PX;
+    border-radius: 10PX;
+    box-shadow: 0 5PX 15PX rgba(0,0,0,0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28PX;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+    form {
+        /* display: inline-block; */
+        display: table-row;
+        /* display: ruby-text; */
+        flex-direction: column;
+    }
+    label {
+        margin-left: 25PX;
+    }
+input {
+    padding: 5PX;
+    margin-top: 5PX;
+    border: 1PX solid #ccc;
+    border-radius: 15PX;
+    position: inherit;
+}
+.button {
+    padding: 10PX;
+    font-size: 1em;
+    color: black; /* Default text color */
+    background-color: white; /* Default background color */
+    border: 2PX solid grey; /* Grey border on all sides */
+    border-radius: 10PX;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for both background and text color */
+}
+
+.button hover {
+    color: white; /* Text color on hover */
+    background-color: navy; /* Background color on hover */
+}
+

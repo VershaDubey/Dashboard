@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Vision</title>
+    <link rel="stylesheet" href="dashbstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+   
+</head>
+
+<body>
+    <header>
+        <img src="Group 79.svg" alt="Farmer">
+        <div class="language-dropdown">
+            <select onchange="setLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+            </select>
+        </div>
+        <div class="auth-buttons">
+            <button class="logout">Logout</button>
+        </div>
+        
+    </header>
+    <nav>
+        <div class="topnav">
+            <a class="active" href="#">Home</a>
+            <a href="#">Crop Monitoring</a>
+            <a href="#">Resource Management</a>
+            <a href="#">Planning & Assessment</a>
+            <a href="#">E-Market</a>
+            <a href="#">Help</a>
+        </div>
+    </nav>
+    <div class="section1">
+        <div class="farmer-container">
+            <i class="fa fa-user-circle custom-size"></i>
+             <h4>Welcome Farmer</h4>
+            <h4>Email id</h4><br>
+            <i class='fa-solid fa-location-dot red-color'></i> 
+            <label for="psw">Location</label>
+            <input type="text" id="psw" name="" required></input>
+            <br><br>
+            <hr>
+            <div class="button-grid">
+                <button>Dashboard</button>
+                <button>Boundary Farm</button>
+                <button>Track Crop Health</button>
+                <button>Water Resource info</button>
+                <button>Plan For Irrigation</button>
+                <button>Harvesting assessment</button>
+                <button>E-market place</button>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="image-container">
+                <img src="wheat.png" alt="Agriculture Image">  
+            </div>
+            <div class="segment">
+                <div class="dropdown">
+                    <button for="farms">Select a farm:</button>
+                    <select id="farms" name="farms">
+                        <option value="farm1">Farm 1</option>
+                        <option value="farm2">Farm 2</option>
+                        <option value="farm3">Farm 3</option>
+                        <option value="farm4">Farm 4</option>
+                    </select>
+                </div>
+                <div class="slider">
+                    <label class="slider-label" for="cropHealth">Crop Health:</label>
+                    <input type="range" id="cropHealth" name="cropHealth" min="0" max="100" oninput="updateSliderValue('cropHealth', this.value)">
+                    <span id="cropHealthValue">50</span>
+                </div>
+        
+                <div class="slider">
+                    <label class="slider-label" for="soilMoisture">Soil Moisture:</label>
+                    <input type="range" id="soilMoisture" name="soilMoisture" min="0" max="100" oninput="updateSliderValue('soilMoisture', this.value)">
+                    <span id="soilMoistureValue">50</span>
+                </div>
+            </div>
+        <button>000000000</button>
+        <label for="psw"></label>
+            <input type="text" id="psw" name="Pesticide nd soil" required></input>
+            <script>
+                function updateSliderValue(sliderId, value) {
+                    document.getElementById(sliderId + 'Value').textContent = value;
+                }
+            </script>
+            </div>
+            </div>
+</body>
+</html>
